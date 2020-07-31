@@ -1,4 +1,22 @@
-FROM python:3.6-slim
+#FROM python:3.6-slim
+
+FROM ubuntu
+
+RUN echo "deb http://archive.ubuntu.com/ubuntu trusty multiverse" >> /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu trusty-updates multiverse" >> /etc/apt/sources.list
+
+# 先更新apt-get
+RUN apt-get update && apt-get upgrade -y
+
+# 安装python3
+RUN apt-get install python3 -y
+
+# 安装FFmpeg
+RUN apt-get install ffmpeg -y
+
+# 安装bottle
+RUN apt-get install python3-pip -y
+RUN pip3 install bottle
 
 # grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.10
