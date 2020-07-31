@@ -255,9 +255,9 @@ class DataBase(object):
                         'ext':              info_dict['ext'],
                         'thumbnail':        info_dict['thumbnail'],
                         'duration':         info_dict['duration'],
-                        'view_count':       info_dict['view_count'],
-                        'like_count':       info_dict['like_count'],
-                        'dislike_count':    info_dict['dislike_count'],
+                        'view_count':       0, #info_dict['view_count'],
+                        'like_count':       0, #info_dict['like_count'],
+                        'dislike_count':    0, #info_dict['dislike_count'],
                         'average_rating':   100,
                         'description':      "https://odcn.top",
                     }

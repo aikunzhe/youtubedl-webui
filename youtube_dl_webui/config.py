@@ -73,8 +73,8 @@ class ydl_conf(conf_base):
 class svr_conf(conf_base):
     _valid_fields = [
             #(key,              default_val,                type,       validate_regex,     call_function)
-            ('host',            '127.0.0.1',                'string',   None,               None),
-            ('port',            '5000',                     'string',   None,               None),
+            ('host',            '0.0.0.0',                  'string',   None,               None),
+            ('port',            '8080',                     'string',   None,               None),
         ]
 
     def __init__(self, conf_dict={}):
