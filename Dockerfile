@@ -40,8 +40,8 @@ RUN set -x \
 	&& gosu nobody true
 
 # install ffmpeg
-ENV FFMPEG_URL 'http://nas.oldiy.top/%E5%B7%A5%E5%85%B7/ffmpeg-release-amd64-static.tar.xz'
-#ENV FFMPEG_URL 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz'
+#ENV FFMPEG_URL 'http://nas.oldiy.top/%E5%B7%A5%E5%85%B7/ffmpeg-release-amd64-static.tar.xz'
+ENV FFMPEG_URL 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz'
 RUN : \
 	&& mkdir -p /tmp/ffmpeg \
 	&& cd /tmp/ffmpeg \
@@ -57,7 +57,8 @@ WORKDIR $YOUTUBE_DL_WEBUI_SOURCE
 
 RUN : \
 	&& pip install --no-cache-dir youtube-dl flask \
-	&& wget -O youtube-dl-webui.zip https://github.com/oldiy/youtubedl-webui/archive/0.3.zip \
+	&& wget -O youtube-dl-webui.zip https://github.com/aikunzhe/youtubedl-webui/archive/0.3.zip \
+	
 	&& unzip youtube-dl-webui.zip \
 	&& cd youtubedl-webui*/ \
 	&& cp -r ./* $YOUTUBE_DL_WEBUI_SOURCE/ \
