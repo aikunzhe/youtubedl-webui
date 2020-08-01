@@ -56,7 +56,7 @@ ENV YOUTUBE_DL_WEBUI_SOURCE /usr/src/youtube_dl_webui
 WORKDIR $YOUTUBE_DL_WEBUI_SOURCE
 
 RUN : \
-	&& pip install --no-cache-dir youtube-dl flask \
+	&& pip3 install --no-cache-dir youtube-dl flask \
 	&& wget -O youtube-dl-webui.zip https://github.com/aikunzhe/youtubedl-webui/archive/0.3.zip \
 	
 	&& unzip youtube-dl-webui.zip \
