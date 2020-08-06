@@ -74,7 +74,7 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-EXPOSE 8080
+EXPOSE 5555
 
 VOLUME ["/youtube_dl"]
 
