@@ -78,4 +78,4 @@ EXPOSE 8080
 
 VOLUME ["/youtube_dl"]
 
-CMD ["python", "-m", "youtube_dl_webui"]
+CMD ["python3", "-m", "youtube_dl_webui"]
